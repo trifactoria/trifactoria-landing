@@ -28,7 +28,7 @@ export default function Home() {
 
             <div className={styles.links}>
               <a
-                href="https://www.rep-os.dev"
+                href="https://rep-os.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.link} ${styles.linkCyan}`}
