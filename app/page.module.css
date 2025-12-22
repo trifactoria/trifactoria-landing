@@ -1,0 +1,320 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60vh;
+  background: #fff;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem 2rem;
+  min-height: 50vh;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 750px;
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  animation: none;
+}
+
+.cardSection {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 48px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  padding: 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.linkCyan {
+  background: rgba(0, 188, 212, 0.12);
+  border-color: rgba(0, 188, 212, 0.3);
+}
+
+.linkCyan:hover {
+  background: rgba(0, 188, 212, 0.2);
+  border-color: var(--cyan);
+}
+
+.linkMagenta {
+  background: rgba(233, 30, 99, 0.12);
+  border-color: rgba(233, 30, 99, 0.3);
+}
+
+.linkMagenta:hover {
+  background: rgba(233, 30, 99, 0.2);
+  border-color: var(--magenta);
+}
+
+.linkYellow {
+  background: rgba(255, 214, 0, 0.12);
+  border-color: rgba(255, 214, 0, 0.3);
+}
+
+.linkYellow:hover {
+  background: rgba(255, 214, 0, 0.2);
+  border-color: var(--yellow);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.linkCyan .dot {
+  background: var(--cyan);
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+.linkMagenta .dot {
+  background: var(--magenta);
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+}
+
+.linkYellow .dot {
+  background: var(--yellow);
+  box-shadow: 0 0 10px rgba(255, 214, 0, 0.5);
+}
+
+.link:hover .dot {
+  transform: scale(1.3);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.linkText {
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.pinkText {
+  color: var(--magenta);
+  font-weight: 800;
+}
+
+.footer {
+  background: linear-gradient(180deg, transparent 0%, rgba(26, 26, 26, 0.03) 100%);
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+}
+
+.footer p {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logoSection {
+    padding: 3rem 1rem 1rem;
+    min-height: 40vh;
+  }
+
+  .logo {
+    max-width: 280px;
+  }
+
+  .cardSection {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .link {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer p {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 220px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.875rem;
+  }
+
+  .card {
+    padding: 1.5rem 1rem;
+  }
+}
