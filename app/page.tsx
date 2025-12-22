@@ -28,7 +28,7 @@ export default function Home() {
 
             <div className={styles.links}>
               <a
-                href="https://github.com/trifactoria/repos-cli"
+                href="https://www.rep-os.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.link} ${styles.linkCyan}`}
