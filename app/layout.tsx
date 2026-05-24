@@ -4,12 +4,12 @@ import './globals.css'
 export const metadata: Metadata = {
   title: "TriFactoria Labs",
   description:
-    "A studio for exploring software systems, developer tools, and creative infrastructure.",
+    "A technical studio for developer tools, automation systems, AI-assisted workflows, and creative infrastructure.",
   metadataBase: new URL("https://trifactoria.com"),
   openGraph: {
     title: "TriFactoria Labs",
     description:
-      "A small studio space for exploring systems, developer tools, and creative infrastructure.",
+      "A technical studio for developer tools, automation systems, AI-assisted workflows, and creative infrastructure.",
     url: "https://trifactoria.com",
     type: "website",
   },

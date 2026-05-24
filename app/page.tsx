@@ -20,7 +20,7 @@ export default function Home() {
           <div className={styles.card}>
             <h1 className={styles.title}>TriFactoria Labs</h1>
             <p className={styles.description}>
-              TriFactoria Labs is a small studio space for exploring systems, developer tools, and creative infrastructure.
+              TriFactoria Labs is a technical studio for developer tools, automation systems, AI-assisted workflows, and creative infrastructure.
             </p>
             <p className={styles.description}>
               Work here is experimental. Some projects become products. Others remain research.
@@ -60,7 +60,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>© {new Date().getFullYear()} <a href="https://www.skillkraftz.com">SkillKraftz LLC</a></p>
+        <p>© {new Date().getFullYear()} <a href="https://www.skillkraftz.com">SkillKraftz LLC</a>, operating TriFactoria Labs.</p>
       </footer>
     </div>
   )
