@@ -18,9 +18,10 @@ may appear in public footer or legal text.
 
 ## Screenshot
 
-TODO - add a current screenshot after deployment or after generating a local
-production build. Suggested path: `public/screenshot.png`, then reference it from
-this section and from any social preview metadata.
+![TriFactoria Landing Page](public/screenshot.png)
+
+The TriFactoria landing page introducing developer tooling, automation systems,
+AI-assisted workflows, and creative infrastructure projects.
 
 ## Prerequisites
 
