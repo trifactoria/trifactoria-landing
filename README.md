@@ -13,7 +13,7 @@ may appear in public footer or legal text.
 
 ## Project Links
 
-- **Deployed site**: TODO - confirm and add the production URL.
+- **Deployed site**: <https://www.trifactoria.com>
 - **GitHub organization**: <https://github.com/trifactoria>
 
 ## Screenshot
@@ -58,11 +58,12 @@ npm run build
 npm run lint
 ```
 
-The package lock resolves Next.js 14.2.35, where `next lint` is still available.
-If the project is upgraded to Next.js 15, replace the lint script with an
-explicit ESLint or TypeScript check.
+The package lock resolves Next.js 14.2.35, where `next lint` still exists, but
+the repo does not include an ESLint config or ESLint dependencies. The `lint`
+script uses `tsc --noEmit` so checks run non-interactively with the dependencies
+already declared by the project. Run `npm run build` first in a clean checkout
+so Next.js can generate its `.next/types` files.
 
 ## License
 
 Copyright © 2025 SkillKraftz LLC. All rights reserved.
-
